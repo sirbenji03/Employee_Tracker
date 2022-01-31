@@ -85,7 +85,7 @@ function viewDepartment () {
 };
   
 function viewRoles() {
-    connection.query('SELECT * FROM job', function (err, res) {
+    connection.query('SELECT title * FROM job', function (err, res) {
       if (err) throw err;
       console.table(res);
       start();
@@ -168,7 +168,7 @@ function addEmployee () {
           message: "What is the employee's last name?",
         },
         {
-          name: 'jobId',
+          name: 'roleId',
           type: 'input',
           message: "What is the employee's job id?",
         },
